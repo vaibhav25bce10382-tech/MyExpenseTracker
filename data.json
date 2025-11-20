@@ -1,0 +1,20 @@
+[
+    {
+        "description": "shirt",
+        "category": "clothes",
+        "amount": 1500.0,
+        "date": "2025-11-21"
+    },
+    {
+        "description": "chips",
+        "category": "food",
+        "amount": 50.0,
+        "date": "2025-11-21"
+    },
+    {
+        "description": "pizza",
+        "category": "food",
+        "amount": 200.0,
+        "date": "2025-11-21"
+    }
+]
