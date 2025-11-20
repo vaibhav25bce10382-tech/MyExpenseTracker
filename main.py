@@ -1,9 +1,8 @@
 import sys
-from .tracker.utills import print_header, get_valid_number, get_valid_string
+from tracker.utils import print_header, get_valid_number, get_valid_string
 from tracker.logic import add_new_expense, list_expenses, delete_expense_by_index
 from tracker.analysis import show_category_summary
 
-# I have customized the menu to look more unique
 def show_menu_options():
     print("\nPlease choose an action:")
     print("[1] Log a new expense")
@@ -13,19 +12,16 @@ def show_menu_options():
     print("[5] Exit App")
 
 def main_menu():
-    """
-    Entry point for the Expense Manager.
-    """
+    
+    
     while True:
-        print_header("MY WALLET MANAGER") # Changed title
+        print_header("MY WALLET MANAGER")   
         show_menu_options()
         
-        # Changed variable name from 'choice' to 'user_input'
         user_input = input("\nType option number: ")
         
         if user_input == '1':
             print("\n--- New Entry ---")
-            # Changed prompt text to be less generic
             details = get_valid_string("What did you buy? (e.g., Pizza): ")
             ctype = get_valid_string("Which category? (e.g., Food): ")
             cost = get_valid_number("How much was it?: ")
@@ -47,7 +43,6 @@ def main_menu():
             print("\n--- Remove Entry ---")
             list_expenses()
             try:
-                # Changed variable 'idx' to 'delete_id'
                 delete_id = int(get_valid_number("ID of the item to remove: "))
                 if delete_expense_by_index(delete_id):
                     print("Item removed from database.")
