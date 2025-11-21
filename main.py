@@ -53,8 +53,7 @@ def main_menu():
             input("\nPress Enter to go back...")
             
         elif user_input == '5':
-            print("Exiting... Have a good day and take care! \n made by Vaibhav1" \
-            " murty")
+            print("Exiting... Have a good day and take care!  ")
             sys.exit()
         else:
             print("That is not a valid option. Please try 1-5.")
