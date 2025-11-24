@@ -1,10 +1,7 @@
 from tracker.storage import load_expenses
 
 def show_category_summary():
-    """
-    Aggregates expenses by category and prints a report.
-    Satisfies 'Reporting or Analytics' requirement.
-    """
+   
     expenses = load_expenses()
     if not expenses:
         print("No data to analyze.")
@@ -13,7 +10,6 @@ def show_category_summary():
     summary = {}
     total_spent = 0
 
-    # Logic to group by category
     for exp in expenses:
         if exp.category not in summary:
             summary[exp.category] = 0
